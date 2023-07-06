@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
+        backupGlobals="true"
+        backupStaticAttributes="false"
+        colors="true"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        forceCoversAnnotation="false"
+        processIsolation="false"
+        stopOnError="false"
+        stopOnFailure="false"
+        stopOnIncomplete="false"
+        stopOnSkipped="false"
+        timeoutForSmallTests="1"
+        timeoutForMediumTests="10"
+        timeoutForLargeTests="60"
+        bootstrap="vendor/autoload.php"
+        verbose="false"
+        cacheResult="false">
+  <coverage>
+    <include>
+      <directory>src/</directory>
+    </include>
+    <exclude>
+      <directory>tests/</directory>
+    </exclude>
+  </coverage>
+  <testsuites>
+    <testsuite name="Tests">
+      <directory>tests/</directory>
+    </testsuite>
+  </testsuites>
+  <php>
+    <env name="THIS_IS_A_KEY" value="and-this-is-a-value"/>
+  </php>
+</phpunit>
